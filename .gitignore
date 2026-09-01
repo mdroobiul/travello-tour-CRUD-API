@@ -1,0 +1,5 @@
+# Dependencies (ফোল্ডার)
+node_modules/
+
+# Environment Variables (গোপনীয় ফাইল)
+.env
