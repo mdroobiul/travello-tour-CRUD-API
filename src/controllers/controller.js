@@ -2,8 +2,9 @@ const { tourModel } = require("../models/model");
 
 // Create Tour (POST)
 async function createTour(req, res) {
+    let info = req.body;
     try {
-        const newTour = await tourModel.create(req.body);
+        const newTour = await tourModel.create(info);
         res.status(201).json({ message: "Tour created successfully", tour: newTour });
     } catch (error) {
         res.status(500).json({ message: "Error creating tour", error: error.message });
